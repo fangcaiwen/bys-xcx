@@ -1,0 +1,26 @@
+<!--pages/me/me.wxml-->
+<view wx:if="{{!isLogin}}" class="view-container">
+    <view class="view-head">
+      <image src="/images/ic_logo.png" class="logo_style" />
+    </view>
+    <view class="row_line">
+      <view class="row-left">
+         <image class="row-right" src="/images/me/ic_username.png"/>
+         <input class="input" maxlength='11' value='{{phone}}' placeholder-style="color:#999999;" type="number" bindinput='phoneInputFunction' name="userName" placeholder="请输入手机号"  />
+      </view>
+      <image class="row-right" bindtap='clickPhoneDelete' src="/images/me/ic_delete.png"/>
+    </view>
+     <view class="row_line">
+      <view class="row-left">
+         <image class="row-right" src="/images/me/ic_pwd.png"/>
+         <input class="input" password='true' value="{{password}}" bindinput='passwordInputFunction' placeholder-style="color:#999999;" name="password" placeholder="请输入密码"  />
+      </view>
+      <image class="row-right" bindtap='clickPasswordDelete' src="/images/me/ic_delete.png"/>
+    </view>
+    <button type="defaule" bindtap="loginBtnClickEvent" class="btnLogin">登录</button>
+</view>
+<view wx:if="{{isLogin}}" class="view-hasLogincontainer">
+  <text style="margin:50rpx;color:#00ff00">登录成功</text>
+  <image src="{{headSrc}}" class="headImage" />
+  <text style="margin:30rpx;color:#00ff00">你好:{{nickName}}</text>
+</view>

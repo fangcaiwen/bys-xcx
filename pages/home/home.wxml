@@ -1,0 +1,73 @@
+<!--pages/home/home.wxml-->
+  <view class="home-container">
+    <view class="top-view">
+      <text class="top-text" bindtap='clickToListLocks'>{{homeTitle}}</text>
+      <image wx:if="{{homeTitle!='家'}}" bindtap='clickToListLocks' src="/images/nav_arrow_down.png" class="headImage" />
+    </view>
+    <view class="swiper-container"> 
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="locks-container">
+      <view class="locks-head">
+        <view class="locks-head-left">
+          <image src="/images/ic_home_lock.png" class="lock_style" />
+          <text class="textStyle">门锁</text>
+        </view>
+        <text class="textStyle" bindtap='clickToOtherBtnEvent'>更多</text>
+      </view>
+      <view class="locks-body" >
+        <view class="locks-body-items" wx:for="{{roomLocks.majorKeys}}" wx:for-index="idx" wx:for-item="item" wx:key="item">
+          <text class="body-textStyle" data-id="{{item.tdId}}" bindtap='openLockEvent'>{{item.tdName}}</text>
+        </view>
+        <view class="locks-body-items-end" wx:if="{{roomLocks.majorKeys.length<3||roomLocks.length==0}}">
+            <text class="body-textStyle" wx:if="{{roomLocks.majorKeys.length==0||roomLocks.length==0}}">暂无门锁</text>
+        </view>
+      </view>
+    </view>
+    <view class="btns-container">
+      <view class="btns-line">
+          <view class="btns-body-items" bindtap='clickToOtherBtnEvent'>
+            <image src="/images/ic_home_smartcontrol.png" class="body-images"/>
+            <text class="body-textStyle">智能控制</text>
+          </view>
+          <view class="btns-body-items" bindtap='clickToOtherBtnEvent'>
+            <image src="/images/ic_home_repair.png" class="body-images"/>
+            <text class="body-textStyle">维修</text>
+          </view>
+          <view class="btns-body-items-end" bindtap='clickToOtherBtnEvent'>
+            <image src="/images/ic_home_clean.png" class="body-images"/>
+            <text class="body-textStyle">保洁</text>
+          </view>
+      </view>
+      <view class="btns-line">
+          <view class="btns-body-items" bindtap='clickToOtherBtnEvent'>
+            <image src="/images/ic_home_facility.png" class="body-images"/>
+            <text class="body-textStyle">家具电器</text>
+          </view>
+          <view class="btns-body-items" bindtap='clickToOtherBtnEvent'>
+            <image src="/images/ic_home_tempauth.png" class="body-images"/>
+            <text class="body-textStyle">临时权限</text>
+          </view>
+          <view class="btns-body-items-end" bindtap='clickToOtherBtnEvent'>
+            <image src="/images/ic_home_contact.png" class="body-images"/>
+            <text class="body-textStyle">联系管家</text>
+          </view>
+      </view>
+      <view class="btns-line-end">
+          <view class="btns-body-items" bindtap='clickToOtherBtnEvent'>
+            <image src="/images/ic_home_feedback.png" class="body-images"/>
+            <text class="body-textStyle">反馈建议</text>
+          </view>
+          <view class="btns-body-items">
+          </view>
+          <view class="btns-body-items-end">
+          </view>
+      </view>
+    </view>
+  </view>

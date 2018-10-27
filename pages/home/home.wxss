@@ -1,0 +1,137 @@
+/* pages/home/home.wxss */
+.home-container {
+  background-color: #EFEFEF;
+  width: 100%;
+  height: 100%;
+  position:fixed;
+}
+.top-view{
+  width:100%;
+  height:60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  flex-direction: row
+}
+.headImage{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+}
+.top-text{
+  font-size: 36rpx;
+  color:#000000;
+}
+.swiper-container{
+  width: 100%;
+}
+swiper-item image {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  height:362.5rpx;
+}
+.locks-container{
+  width: 710rpx;
+  height: 200rpx;
+  background-color: #FFFFFF;
+  margin: 20rpx;
+  border-radius: 20rpx;
+}
+.locks-head{
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx #EFEFEF solid;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.locks-head-left{
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.textStyle{
+  font-size: 30rpx;
+  color:#808080
+}
+.locks-body{
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.locks-body-items{
+  height:120rpx;
+  flex:1;
+  display: flex;
+  border-right: 1rpx #EFEFEF solid;
+  align-items: center;
+  justify-content: center;
+}
+.locks-body-items-end{
+  height:120rpx;
+  flex:1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btns-container{
+  width: 710rpx;
+  height: 405rpx;
+  background-color: #FFFFFF;
+  margin: 20rpx;
+  border-radius: 20rpx;
+}
+.btns-line{
+  height: 135rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1rpx #EFEFEF solid;
+}
+.btns-line-end{
+  height: 135rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.btns-body-items{
+  height:135rpx;
+  flex:1;
+  flex-direction: column;
+  display: flex;
+  border-right: 1rpx #EFEFEF solid;
+  align-items: center;
+  justify-content: center;
+}
+.btns-body-items-end{
+  height:135rpx;
+  flex:1;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body-textStyle{
+  font-size: 26rpx;
+  color:#666666;
+  margin-top: 10rpx;
+}
+.lock_style{
+  width: 40rpx;
+  height:40rpx;
+  margin-right: 20rpx;
+}
+.body-images{
+  width:40rpx;
+  height: 40rpx;
+}

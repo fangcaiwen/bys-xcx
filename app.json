@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/me/me",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/house/house"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "白云生",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#00b7e3",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "box-shadow": "0 0 2px 0",
+    "list": [
+      {
+        "pagePath": "pages/house/house",
+        "iconPath": "images/tab_housing_normal.png",
+        "selectedIconPath": "images/tab_housing_selected.png",
+        "text": "找房"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/tab_home_normal.png",
+        "selectedIconPath": "images/tab_home_selected.png",
+        "text": "家"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "images/tab_me_normal.png",
+        "selectedIconPath": "images/tab_me_selected.png",
+        "text": "我的"
+      }
+    ]
+  }
+}
